@@ -1,0 +1,241 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+*
+	padding: 0
+	margin: 0
+	box-sizing: border-box
+
+.container-fluid
+	padding: 0
+.hero
+	font-family: "Roboto Light"
+	&__nav
+		width: 100%
+		height: 80px
+		background-color: #1c1e2a
+		display: flex
+		align-items: center
+		justify-content: flex-start
+
+		.wrapper
+			max-width: 51%
+		ul
+			padding-top: 17px
+			color: white
+			list-style-type: none
+			display: flex
+			width: 563px
+			justify-content: space-between
+			li
+				font-size: 16px
+
+				a
+					text-decoration: none
+					color: inherit
+
+	&__content
+		height: 220px
+		background-color: #282c3c
+
+		&__wrapper
+			height: 100%
+			display: flex
+			align-items: center
+			justify-content: space-between
+			width: 51%
+			padding-bottom: 10px
+			padding-right: 0
+
+			.telephone
+				color: white
+				display: flex
+				align-items: flex-end
+				flex-direction: column
+				h2
+					font-family: "Roboto Light"
+					font-weight: normal
+					font-size: 30px
+					line-height: 35px
+					span
+						font-size: 48px
+						font-family: "robotoBold"
+						font-weight: bold
+						letter-spacing: 1px
+
+				a
+					color: #18b4fa
+					font-size: 18px
+					font-family: "Roboto Regular"
+
+.blog
+	height: 1400px
+	background-color: #eef2fa
+	&__content
+		width: 51%
+		padding-right: 0
+
+		&__top
+			padding-top: 6%
+			display: flex
+			align-items: center
+
+			h1
+				font-family: "RobotoBlack"
+				font-weight: 900
+				font-size: 62px
+				letter-spacing: 3px
+				padding-right: 75px
+
+			button
+				font-family: "Roboto Regular"
+				height: 40px
+				color: #72788e
+				background-color: transparent
+				border-radius: 40px
+				border: solid 2px #dce2f0
+				margin-top: 7px
+				padding-bottom: 5px
+				position: relative
+				transition: 0.2s
+
+				&:hover
+					background-color: #18b4fa
+					color: white
+					border-color: #18b4fa
+					cursor: pointer
+
+					&:before
+						content: " "
+						position: absolute
+						bottom: -7px
+						left: 50%
+						margin-left: -3px
+						width: 0
+						height: 0
+						border-style: solid
+						border-width: 6px 6px 0 6px
+						border-color: #18b4fa transparent transparent transparent
+
+				&.first-btn
+					width: 140px
+
+				&.second-btn
+					width: 120px
+					margin-left: 20px
+
+				&.third-btn
+					width: 180px
+					margin-left: 20px
+
+		&__posts
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+			margin-top: 23px
+			&__general
+				&__footer
+					padding-top: 13px!important
+					h2,p
+						font-family: "Roboto Regular"
+						font-size: 20px
+						color: #282828
+						line-height: 26px
+						margin-bottom: 8px!important
+						letter-spacing: -0.4px
+						font-weight: normal
+
+					p
+						font-size: 14px
+
+					.counters
+						display: flex
+						align-items: center
+						margin-top: 12px
+
+						span
+							color: #72788e
+							margin-left: 9px
+
+						.eye
+							margin-left: 30px
+
+			&__new
+				margin-right: 3px
+				font-family: "Roboto Regular"
+				&__footer
+					padding-top: 13px!important
+					padding-left: 22px!important
+					h2
+						font-size: 20px
+					h3
+						color: #78c22c
+						font-size: 12px
+						margin-bottom: 0
+						line-height: 18px
+					p
+						font-size: 14px
+						letter-spacing: -0.5px
+						margin-bottom: 0
+						line-height: 18px
+					.counters
+						display: flex
+						align-items: center
+						margin-top: 12px
+
+						span
+							color: #72788e
+							margin-left: 9px
+
+						.eye
+							margin-left: 30px
+			margin-right: -2px
+			&__hot
+				&__footer
+					padding-top: 13px!important
+					h3
+						color: #fa204c
+						font-family: "Roboto Regular"
+						font-size: 20px
+						letter-spacing: -0.4px
+						line-height: 26px
+						font-weight: normal
+			.post
+				width: 300px
+				height: 520px
+
+				&:nth-child(n+4)
+					margin-top: 25px
+
+				.footer
+					width: 100%
+					height: 220px
+					background-color: white
+					padding: 20px
+
+
+
+
+
+@import "media" // Always at the end
