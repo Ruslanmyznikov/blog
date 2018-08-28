@@ -29,6 +29,10 @@ b, strong
 
 .container-fluid
 	padding: 0
+
+.container
+	padding: 0
+
 .hero
 	font-family: "Roboto Light"
 	&__nav
@@ -40,7 +44,6 @@ b, strong
 		justify-content: flex-start
 
 		.wrapper
-			max-width: 51%
 		ul
 			padding-top: 17px
 			color: white
@@ -55,6 +58,10 @@ b, strong
 					text-decoration: none
 					color: inherit
 
+					&:hover
+						color: #18b4fa
+						text-decoration: underline
+
 	&__content
 		height: 220px
 		background-color: #282c3c
@@ -64,7 +71,6 @@ b, strong
 			display: flex
 			align-items: center
 			justify-content: space-between
-			width: 51%
 			padding-bottom: 10px
 			padding-right: 0
 
@@ -90,10 +96,9 @@ b, strong
 					font-family: "Roboto Regular"
 
 .blog
-	height: 1400px
+	min-height: 1400px
 	background-color: #eef2fa
 	&__content
-		width: 51%
 		padding-right: 0
 
 		&__top
@@ -119,6 +124,7 @@ b, strong
 				padding-bottom: 5px
 				position: relative
 				transition: 0.2s
+				outline: none!important
 
 				&:hover
 					background-color: #18b4fa
@@ -221,12 +227,24 @@ b, strong
 						letter-spacing: -0.4px
 						line-height: 26px
 						font-weight: normal
+
+					.counters
+						display: flex
+						align-items: center
+						margin-top: 12px
+
+						span
+							color: #72788e
+							margin-left: 9px
+
+						.eye
+							margin-left: 30px
 			.post
 				width: 300px
 				height: 520px
 
 				&:nth-child(n+4)
-					margin-top: 25px
+					margin-top: 30px
 
 				.footer
 					width: 100%
@@ -234,8 +252,50 @@ b, strong
 					background-color: white
 					padding: 20px
 
+.footer-section
+	min-height: 200px
+	display: flex
+	align-items: center
+	background-color: #181e2a
+	&__content
+		display: flex
+		justify-content: space-between
+		align-items: center
+		flex-wrap: wrap
+		height: 100%
+		padding-bottom: 26px
+
+		.copyright
+			p
+				color: white
+				font-family: "Roboto Regular"
+				font-size: 16px
+				margin-bottom: 0
+
+				&:last-child
+					margin-bottom: 20px
+
+		.telephone
+			color: white
+			display: flex
+			align-items: flex-end
+			flex-direction: column
+			h2
+				font-family: "Roboto Light"
+				font-weight: normal
+				font-size: 30px
+				line-height: 25px
+				span
+					font-size: 48px
+					font-family: "robotoBold"
+					font-weight: bold
+					letter-spacing: 1px
 
 
+			a
+				color: #18b4fa
+				font-size: 17.5px
+				font-family: "Roboto Regular"
 
 
 @import "media" // Always at the end
