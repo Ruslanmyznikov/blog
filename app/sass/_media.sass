@@ -27,6 +27,15 @@
         width: auto
 // ≥576px
 +media-breakpoint-down(xs)
+  .hero
+    .navigation
+      display: block
+      position: fixed
+      top: 0
+      z-index: 500
+      width: 100%
+    &__content
+      margin-top: 50px
   .hero__content__wrapper
     padding: 0 20px!important
     img
@@ -35,9 +44,10 @@
     h2
       font-size: 18px!important
       span
-        font-size: 26px!important
+        font-size: 20px!important
   .hero
     &__nav
+      display: none
       ul
         display: none
   .blog__content__top

@@ -3,299 +3,424 @@
 @import "libs"
 
 ::placeholder
-	color: #666
+  color: #666
 
 ::selection
-	background-color: $accent
-	color: #fff
+  background-color: $accent
+  color: #fff
 
 .img-responsive
-	display: block
-	max-width: 100%
-	height: auto
-	&.img-width
-		width: 100%
+  display: block
+  max-width: 100%
+  height: auto
+  &.img-width
+    width: 100%
 
 .text-center
-	text-align: center
+  text-align: center
 
 b, strong
-	font-weight: bold
+  font-weight: bold
 
 *
-	padding: 0
-	margin: 0
-	box-sizing: border-box
+  padding: 0
+  margin: 0
+  box-sizing: border-box
 
 .container-fluid
-	padding: 0
+  padding: 0
 
 .container
-	padding: 0
+  padding: 0
+
+body
+  overflow-x: hidden
 
 .hero
-	font-family: "Roboto Light"
-	&__nav
-		width: 100%
-		height: 80px
-		background-color: #1c1e2a
-		display: flex
-		align-items: center
-		justify-content: flex-start
+  font-family: 'Roboto'
+  font-weight: normal
+  font-style: normal
+  .navigation
+    display: none
+  &__nav
+    width: 100%
+    height: 80px
+    background-color: #1c1e2a
+    display: flex
+    align-items: center
+    justify-content: center
+    position: fixed
+    top: 0
+    z-index: 500
 
-		.wrapper
-		ul
-			padding-top: 17px
-			color: white
-			list-style-type: none
-			display: flex
-			width: 563px
-			justify-content: space-between
-			li
-				font-size: 16px
+    .wrapper
+      display: flex
+      justify-content: center
+      ul
+        padding-top: 17px
+        color: white
+        list-style-type: none
+        display: flex
+        width: 563px
+        justify-content: space-between
+        li
+          font-size: 16px
 
-				a
-					text-decoration: none
-					color: inherit
+          a
+            text-decoration: none
+            color: inherit
 
-					&:hover
-						color: #18b4fa
-						text-decoration: underline
+            &:hover
+              color: #18b4fa
+              text-decoration: underline
 
-	&__content
-		height: 220px
-		background-color: #282c3c
+  &__content
+    height: 220px
+    background-color: #282c3c
+    margin-top: 80px
 
-		&__wrapper
-			height: 100%
-			display: flex
-			align-items: center
-			justify-content: space-between
-			padding-bottom: 10px
-			padding-right: 0
+    &__wrapper
+      height: 100%
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding-bottom: 10px
+      padding-right: 0
 
-			.telephone
-				color: white
-				display: flex
-				align-items: flex-end
-				flex-direction: column
-				h2
-					font-family: "Roboto Light"
-					font-weight: normal
-					font-size: 30px
-					line-height: 35px
-					span
-						font-size: 48px
-						font-family: "robotoBold"
-						font-weight: bold
-						letter-spacing: 1px
+      .telephone
+        color: white
+        display: flex
+        align-items: flex-end
+        flex-direction: column
+        h2
+          font-family: 'Roboto'
+          font-weight: normal
+          font-style: normal
+          font-size: 30px
+          line-height: 35px
+          span
+            font-size: 48px
+            font-family: 'Roboto'
+            font-weight: bold
+            font-style: normal
+            letter-spacing: 1px
 
-				a
-					color: #18b4fa
-					font-size: 18px
-					font-family: "Roboto Regular"
+        a
+          color: #18b4fa
+          font-size: 18px
+          font-family: 'Roboto'
+          font-weight: normal
+          font-style: normal
 
 .blog
-	min-height: 1400px
-	background-color: #eef2fa
-	&__content
-		padding-right: 0
+  overflow-x: hidden
+  min-height: 1400px
+  background-color: #eef2fa
+  &__content
+    padding-right: 0
 
-		&__top
-			padding-top: 6%
-			display: flex
-			align-items: center
+    &__top
+      padding-top: 6%
+      display: flex
+      align-items: center
 
-			h1
-				font-family: "RobotoBlack"
-				font-weight: 900
-				font-size: 62px
-				letter-spacing: 3px
-				padding-right: 75px
+      h1
+        font-family: "RobotoBlack"
+        font-weight: 900
+        font-size: 62px
+        letter-spacing: 3px
+        padding-right: 75px
 
-			button
-				font-family: "Roboto Regular"
-				height: 40px
-				color: #72788e
-				background-color: transparent
-				border-radius: 40px
-				border: solid 2px #dce2f0
-				margin-top: 7px
-				padding-bottom: 5px
-				position: relative
-				transition: 0.2s
-				outline: none!important
+      button
+        font-family: 'Roboto'
+        font-weight: normal
+        font-style: normal
+        height: 40px
+        color: #72788e
+        background-color: transparent
+        border-radius: 40px
+        border: solid 2px #dce2f0
+        margin-top: 7px
+        padding-bottom: 2px
+        position: relative
+        transition: 0.2s
+        outline: none !important
 
-				&:hover
-					background-color: #18b4fa
-					color: white
-					border-color: #18b4fa
-					cursor: pointer
+        &:hover
+          background-color: #18b4fa
+          color: white
+          border-color: #18b4fa
+          cursor: pointer
 
-					&:before
-						content: " "
-						position: absolute
-						bottom: -7px
-						left: 50%
-						margin-left: -3px
-						width: 0
-						height: 0
-						border-style: solid
-						border-width: 6px 6px 0 6px
-						border-color: #18b4fa transparent transparent transparent
+          &:before
+            content: " "
+            position: absolute
+            bottom: -7px
+            left: 50%
+            margin-left: -3px
+            width: 0
+            height: 0
+            border-style: solid
+            border-width: 6px 6px 0 6px
+            border-color: #18b4fa transparent transparent transparent
 
-				&.first-btn
-					width: 140px
+        &.first-btn
+          width: 140px
 
-				&.second-btn
-					width: 120px
-					margin-left: 20px
+        &.second-btn
+          width: 120px
+          margin-left: 20px
 
-				&.third-btn
-					width: 180px
-					margin-left: 20px
+        &.third-btn
+          width: 180px
+          margin-left: 20px
 
-		&__posts
-			display: flex
-			flex-wrap: wrap
-			justify-content: space-between
-			margin-top: 23px
-			&__general
-				&__footer
-					padding-top: 13px!important
-					h2,p
-						font-family: "Roboto Regular"
-						font-size: 20px
-						color: #282828
-						line-height: 26px
-						margin-bottom: 8px!important
-						letter-spacing: -0.4px
-						font-weight: normal
+    &__posts
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      margin-top: 23px
+      &__general
+        font-family: 'Roboto'
+        font-weight: normal
+        font-style: normal
+        &__footer
+          padding-top: 13px !important
+          h2, p
+            font-family: 'Roboto'
+            font-weight: normal
+            font-style: normal
+            font-size: 20px
+            color: #282828
+            line-height: 26px
+            margin-bottom: 8px !important
+            letter-spacing: -0.4px
+            font-weight: normal
 
-					p
-						font-size: 14px
+          p
+            font-size: 14px
 
-					.counters
-						display: flex
-						align-items: center
-						margin-top: 12px
+          .counters
+            display: flex
+            align-items: center
+            margin-top: 12px
 
-						span
-							color: #72788e
-							margin-left: 9px
+            span
+              color: #72788e
+              margin-left: 9px
+              font-family: 'Roboto'
+              font-weight: normal
+              font-style: normal
 
-						.eye
-							margin-left: 30px
+            .eye
+              margin-left: 30px
 
-			&__new
-				margin-right: 3px
-				font-family: "Roboto Regular"
-				&__footer
-					padding-top: 13px!important
-					padding-left: 22px!important
-					h2
-						font-size: 20px
-					h3
-						color: #78c22c
-						font-size: 12px
-						margin-bottom: 0
-						line-height: 18px
-					p
-						font-size: 14px
-						letter-spacing: -0.5px
-						margin-bottom: 0
-						line-height: 18px
-					.counters
-						display: flex
-						align-items: center
-						margin-top: 12px
+      &__new
+        margin-right: 3px
+        font-family: 'Roboto'
+        font-weight: normal
+        font-style: normal
+        &__footer
+          padding-top: 13px !important
+          padding-left: 22px !important
+          h2
+            font-size: 20px
+          h3
+            color: #78c22c
+            font-size: 12px
+            margin-bottom: 0
+            line-height: 18px
+          p
+            font-size: 14px
+            letter-spacing: -0.5px
+            margin-bottom: 0
+            line-height: 18px
+          .counters
+            display: flex
+            align-items: center
+            margin-top: 12px
 
-						span
-							color: #72788e
-							margin-left: 9px
+            span
+              color: #72788e
+              margin-left: 9px
 
-						.eye
-							margin-left: 30px
-			margin-right: -2px
-			&__hot
-				&__footer
-					padding-top: 13px!important
-					h3
-						color: #fa204c
-						font-family: "Roboto Regular"
-						font-size: 20px
-						letter-spacing: -0.4px
-						line-height: 26px
-						font-weight: normal
+            .eye
+              margin-left: 30px
+      margin-right: -2px
+      &__hot
+        font-family: 'Roboto'
+        font-weight: normal
+        font-style: normal
+        &__footer
+          padding-top: 13px !important
+          h3
+            color: #fa204c
+            font-family: 'Roboto'
+            font-weight: normal
+            font-style: normal
+            font-size: 20px
+            letter-spacing: -0.4px
+            line-height: 26px
+            font-weight: normal
 
-					.counters
-						display: flex
-						align-items: center
-						margin-top: 12px
+          .counters
+            display: flex
+            align-items: center
+            margin-top: 12px
 
-						span
-							color: #72788e
-							margin-left: 9px
+            span
+              color: #72788e
+              margin-left: 9px
+              font-family: 'Roboto'
+              font-weight: normal
+              font-style: normal
 
-						.eye
-							margin-left: 30px
-			.post
-				width: 300px
-				height: 520px
+            .eye
+              margin-left: 30px
+      .post
+        width: 300px
+        height: 520px
 
-				&:nth-child(n+4)
-					margin-top: 30px
+        &:nth-child(n+4)
+          margin-top: 30px
 
-				.footer
-					width: 100%
-					height: 220px
-					background-color: white
-					padding: 20px
+        .footer
+          width: 100%
+          height: 220px
+          background-color: white
+          padding: 20px
 
 .footer-section
-	min-height: 200px
-	display: flex
-	align-items: center
-	background-color: #181e2a
-	&__content
-		display: flex
-		justify-content: space-between
-		align-items: center
-		flex-wrap: wrap
-		height: 100%
-		padding-bottom: 26px
+  min-height: 200px
+  display: flex
+  align-items: center
+  background-color: #181e2a
+  &__content
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+    height: 100%
+    padding-bottom: 26px
 
-		.copyright
-			p
-				color: white
-				font-family: "Roboto Regular"
-				font-size: 16px
-				margin-bottom: 0
+    .copyright
+      p
+        color: white
+        font-family: "Roboto"
+        font-style: normal
+        font-weight: normal
+        font-size: 16px
+        margin-bottom: 0
 
-				&:last-child
-					margin-bottom: 20px
+        &:last-child
+          margin-bottom: 20px
 
-		.telephone
-			color: white
-			display: flex
-			align-items: flex-end
-			flex-direction: column
-			h2
-				font-family: "Roboto Light"
-				font-weight: normal
-				font-size: 30px
-				line-height: 25px
-				span
-					font-size: 48px
-					font-family: "robotoBold"
-					font-weight: bold
-					letter-spacing: 1px
+    .telephone
+      font-family: "Roboto"
+      color: white
+      display: flex
+      align-items: flex-end
+      flex-direction: column
+      h2
+        font-family: "Roboto"
+        font-weight: normal
+        font-size: 30px
+        line-height: 25px
+        span
+          font-size: 48px
+          font-family: "robotoBold"
+          font-weight: bold
+          letter-spacing: 1px
+
+      a
+        color: #18b4fa
+        font-size: 17.5px
+        font-family: "Roboto"
+
+.navigation
+  height: 50px
+  background-color: #1c1e2a
+  overflow: hidden
+
+#menuToggle
+  display: block
+  position: relative
+  top: 13px
+  left: 35px
+  z-index: 1
+  -webkit-user-select: none
+  user-select: none
+  input
+    display: block
+    width: 40px
+    height: 32px
+    position: absolute
+    top: -7px
+    left: -5px
+    cursor: pointer
+    opacity: 0
+    /* hide this
+    z-index: 2
+    /* and place it over the hamburger
+    -webkit-touch-callout: none
+  span
+    display: block
+    width: 33px
+    height: 4px
+    margin-bottom: 5px
+    position: relative
+    background: white
+    border-radius: 3px
+    z-index: 1
+    transform-origin: 4px 0px
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease
+    &:first-child
+      transform-origin: 0% 0%
+    &:nth-last-child(2)
+      transform-origin: 0% 100%
+  input:checked ~ span
+    opacity: 1
+    transform: rotate(45deg) translate(-2px, -1px)
+    background: white
+    &:nth-last-child(3)
+      opacity: 0
+      transform: rotate(0deg) scale(0.2, 0.2)
+    &:nth-last-child(2)
+      transform: rotate(-45deg) translate(0, -1px)
+
+#menu
+  position: fixed
+  width: 100vw
+  height: 100vh
+  top: 0
+  left: 0
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  background: rgba(0,0,0, 0.7)
+  list-style-type: none
+  -webkit-font-smoothing: antialiased
+  transform-origin: 0% 0%
+  transform: translate(-100%, 0)
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1)
+
+  a
+    font-family: "RobotoBold"
+    color: white
 
 
-			a
-				color: #18b4fa
-				font-size: 17.5px
-				font-family: "Roboto Regular"
+    li
+      padding: 10px 0
+      color: white
+      font-size: 32px
 
 
-@import "media" // Always at the end
+
+/*
+ * And let's slide it in from the left
+
+#menuToggle input:checked ~ ul
+  transform: none
+@import "media"
+// Always at the end
